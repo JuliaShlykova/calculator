@@ -1,0 +1,116 @@
+html,body{
+    margin:0;
+    padding: 0;
+}
+#container{
+    box-shadow: 0 0 10px gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:10px;
+    background-color:rgb(33, 82, 97);
+}
+@media (max-width:350px){
+    #container{
+        width:100vw;
+    }
+}
+#display{
+    border: 1px solid black;
+    width:95%;
+    padding:3px;
+    background-color: paleturquoise;
+    font-family: monospace;
+    font-size: 3.5rem;
+    overflow: auto;
+}
+#buttons{
+    display: grid;
+    margin-top: 20px;
+    width:95%;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,80px);
+}
+#buttons button{
+    font-size: 2rem;
+    margin: 5%;
+}
+#equal{
+    grid-area: 3/4/span 2/4;
+    background-color: rgba(153, 93, 52,0.8);
+}
+button:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+#equal:hover{
+    background-color: rgb(153, 93, 52);
+}
+.operators{
+    background-color: rgba(70, 127, 145,0.8);
+}
+#clear{
+    background-color: rgba(139, 0, 0,0.8);
+}
+.operators:hover{
+    background-color: rgb(70, 127, 145);
+}
+#clear:hover{
+    background-color: rgb(139, 0, 0);
+}
+button:focus{
+    outline: none;
+}
+#backspace{
+    grid-area: 5/3/5/span 2;
+    background-color: rgba(70, 127, 145,0.8);
+}
+#backspace:hover{
+    background-color: rgb(70, 127, 145);
+}
+#themes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    position: absolute;
+    bottom:2vh;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    
+}
+#themes button{
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 3px double black;
+    border-radius: 25%;
+}
+#themes button:hover{
+    box-shadow: 0 0 10px black;
+}
+#light{
+    background-color: paleturquoise;
+}
+#dark{
+    background-color: dimgray;
+    color: white;
+}
+#retro{
+    background-color: rosybrown;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+.withoutBorders{
+    border:none;
+}
+.withoutBorders:hover{
+    background-color: rgba(0,0,0,0.05) !important;
+}
