@@ -114,6 +114,10 @@ const clear = document.querySelector('#clear');
 clear.addEventListener('click', clearAll);
 function deleteLastSymbol(){
     if (number!=''&&computed===0){
+        if (number.substring(number.length-1)==="."){
+            decimalActivated = 0;
+            decimal.disabled = decimalActivated;
+        }
         number = number.slice(0,-1);
         displayValue=displayValue.slice(0,-1);
         display.textContent = displayValue;
